@@ -1,0 +1,116 @@
+.pages {
+	display: flex;
+	img {
+		max-width: 100%;
+	}
+	a {
+		color: $colorViolet;
+		font-weight: 800;
+	}
+	ul,
+	ol {
+		display: flex;
+		flex-direction: column;
+		gap: rem(15);
+		a {
+			text-decoration: none;
+		}
+	}
+	ul {
+		li:before {
+			font-weight: 900;
+			font-size: 30px;
+			color: $colorCian; /* Цвет маркера */
+			content: "•"; /* Маркер */
+			padding-right: 7px; /* Отступ от маркера до текста */
+		}
+	}
+	ol {
+		list-style: none;
+		counter-reset: myCounter;
+		li {
+			position: relative;
+			padding: 0 0 0 1.875rem;
+		}
+		li:before {
+			counter-increment: myCounter;
+			content: counter(myCounter) ".";
+			color: $colorBlue;
+			font-size: large;
+			font-weight: 800;
+			position: absolute;
+			left: 0;
+		}
+	}
+
+	p,
+	li {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: rem(30);
+		text-align: justify;
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+	&__wrapper {
+		background: $colorWhite;
+		box-shadow: 30px 30px 4px darken($color: $colorViolet, $amount: 10);
+		border-radius: 5px 5px 150px 5px;
+		flex: auto;
+		margin-bottom: rem(50);
+		display: flex;
+		flex-direction: column;
+		padding: rem(50) rem(60) rem(50) rem(90);
+	}
+	&__title {
+		margin-bottom: rem(20);
+	}
+	&__content {
+		display: flex;
+		gap: rem(20);
+	}
+	&__content-meangful {
+		flex: 3;
+		gap: rem(30);
+		display: flex;
+		flex-direction: column;
+		padding: 0 rem(5);
+	}
+	&__category {
+		margin-bottom: em(5, 5);
+		a {
+			color: $colorBlue;
+			text-decoration: none;
+		}
+	}
+	blockquote {
+		border-left: 0.25rem solid #5e5372;
+		padding: 0 rem(10) 0 0.9375rem;
+		line-height: 1.5;
+		background-color: $colorLiteGray;
+		border-radius: 0 rem(10) rem(10) 0;
+	}
+	.content-wrapper {
+		display: flex;
+	}
+	.widgets-area {
+		background: #fff3e3;
+		box-shadow: 2px 2px 2px 2px #dcd1f3;
+		border-radius: rem(20);
+		flex: 1;
+		height: fit-content;
+		padding: rem(15);
+		li {
+			list-style: none;
+			position: relative;
+			padding: 0 0 0 1.875rem;
+			text-align: left;
+			a {
+				text-decoration: none;
+				color: $colorPink;
+			}
+		}
+	}
+}

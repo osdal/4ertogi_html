@@ -1,0 +1,58 @@
+<html>
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="pages">
+			<div class="pages__container">
+				@@include('html/_search.htm',{})
+
+				<div class="pages__wrapper">
+					<h1 class="title1-cian">Модуль «Спойлери»</h1>
+					<div class="pages__category">
+						<span class="black-paragraph">
+							категория:
+						</span>
+						<a href="#" class="cian-paragraph">
+							Документация «Мечта верстальщика»
+						</a>
+					</div>
+					<div class="pages__content">
+						@@include('html/_widgets.htm',{})
+						<div class="pages__content-meangful">
+							<p>Спойлер – это заголовок, при нажатии на который под ним разворачивается определенный контент.
+							</p>
+							<h2 class="title2-violet">Основные возможности</h2>
+							<ol>
+								<li>Использование множества блоков со спойлерами</li>
+								<li>Выключение/включение функционала на определенной ширине экрана</li>
+								<li>Функция «аккордеон», когда в блоке может быть открыт только один спойлер</li>
+								<li>Возможность анимированного открытия</li>
+								<li>Семантик</li>
+							</ol>
+							<h2 class="title2-violet">Подключение функционала</h2>
+							<p><b>[HTML]</b> В нужном месте вызвать <a href="#">снипет spollers</a> (классы можно заменить
+								нужными). Или вручную создать структуру с соответствующими дата-атрибутами. Обратите внимание,
+								<b>что добавление </b>класса
+								<b>_spoller-active</b> для элемента с атрибутом data-spoller сделает спойлер активным
+								(открытым).
+							</p>
+							<p>Пример блока с двумя спойлерами:</p>
+							<pre>
+								<code><span class="tag"><<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">data-goto</span>=<span class="value">".имя класса блока"</span> <span class="attribute">class</span>=<span class="value">"link"</span>></span>Пункт навігаціі<span class="tag"></<span class="title">a</span>></span>
+
+									<span class="tag"><<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">data-goto</span>=<span class="value">"#id блока"</span> <span class="attribute">class</span>=<span class="value">"link"</span>></span>Пункт навігаціі<span class="tag"></<span class="title">a</span>></span></code>
+							</pre>
+						</div>
+						@@include('html/_widgets.htm',{})
+					</div>
+				</div>
+
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

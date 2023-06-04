@@ -1,0 +1,17 @@
+//====================================================================================================
+footer {
+	background-color: darken($color: $colorViolet, $amount: 10);
+	.footer__container {
+		display: flex;
+		justify-content: center;
+	}
+	ul {
+		display: flex;
+		gap: rem(50);
+		li::before {
+			content: none;
+		}
+	}
+}
+
+//====================================================================================================

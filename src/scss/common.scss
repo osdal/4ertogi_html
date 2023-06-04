@@ -1,0 +1,136 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.title1,
+.title1-cian {
+	font-weight: 900;
+	font-size: rem(50);
+	line-height: rem(60);
+	flex: 0.7;
+	letter-spacing: 0.255em;
+	text-transform: uppercase;
+}
+.title1 {
+	color: $colorYellow;
+}
+.title1-cian {
+	color: $colorCian;
+}
+
+.title2,
+.title2-white,
+.title2-violet {
+	font-weight: 700;
+	font-size: rem(40);
+	line-height: rem(40);
+}
+.title2-white {
+	color: $colorWhite;
+}
+.title2-violet {
+	color: $colorViolet;
+}
+.title3,
+.title3-violet,
+.title3-white {
+	font-weight: 800;
+	font-size: 35px;
+	line-height: 48px;
+	letter-spacing: 0.255em;
+	text-transform: uppercase;
+}
+
+.title3-white {
+	color: $colorWhite;
+}
+.title3-violet {
+	color: $colorViolet;
+}
+
+.title4,
+.title4-violet {
+	font-weight: 700;
+	font-size: rem(25);
+	line-height: 29px;
+}
+
+.title4-violet {
+	color: $colorViolet;
+}
+
+.white-paragraph,
+.black-paragraph,
+.cian-paragraph {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 35px;
+	letter-spacing: 0.255em;
+	text-transform: uppercase;
+}
+
+.white-paragraph {
+	color: $colorWhite;
+}
+
+.black-paragraph {
+	color: $colorBlack;
+}
+
+.cian-paragraph {
+	color: $colorCian;
+}
+
+.star {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: flex-end;
+	height: rem(287);
+	width: rem(287);
+	position: relative;
+	div {
+		font-weight: 900;
+		font-size: 50px;
+		line-height: 61px;
+		text-align: center;
+		z-index: 1;
+		&::before {
+			content: "";
+			background: url(@img/Vector.svg) center/100% no-repeat;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			position: absolute;
+			z-index: -1;
+			animation: rotate 80s infinite linear;
+		}
+		@keyframes rotate {
+			0% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(0);
+				transform: rotate(0);
+			}
+		}
+	}
+}
+.search {
+	input {
+		width: rem(860);
+		height: rem(50);
+		background-color: #fff;
+		border-radius: 5px;
+		margin-right: rem(140);
+	}
+	margin-bottom: rem(130);
+}
+pre,
+code {
+	width: 100%;
+	tab-size: 1.875rem;
+	display: block;
+	overflow-wrap: break-word;
+	white-space: pre-wrap;
+}
