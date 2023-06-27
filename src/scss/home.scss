@@ -6,6 +6,13 @@
 		color: $colorCian;
 		transition: color 1s;
 	}
+	a {
+		color: $colorYellow;
+		outline: none;
+	}
+	// a:visited {
+	// 	color: transparent;
+	// }
 }
 .top-section {
 	color: $colorYellow;
@@ -103,6 +110,22 @@
 		}
 	}
 	&__middle {
+		position: relative;
+		h1 span {
+			font: 26px Monaco, MonoSpace;
+			height: 200px;
+			position: absolute;
+			width: 20px;
+			left: 0;
+			top: 0;
+			transform-origin: bottom center;
+			color: $colorWhite;
+			text-transform: uppercase;
+			font-weight: 900;
+			opacity: 50%;
+		}
+		@include rotated-text;
+
 		.portreit {
 			display: flex;
 			justify-content: center;
@@ -127,6 +150,7 @@
 		}
 		place-self: center;
 	}
+
 	&__right {
 		flex: 0;
 		font-size: rem(32);

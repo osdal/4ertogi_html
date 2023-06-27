@@ -11,3 +11,13 @@ import { flsModules } from "./modules.js";
 // topSectionSecondRow.style.height = width + 'px';
 
 // console.log(width);
+
+$(".center-section__middle h1").lettering();
+
+let myName = $(".center-section__middle h1");
+console.log(myName);
+
+// @for $i from 1 through 100 {
+// 	.char#{$i} + transform(rotate(($i * 6) + deg))
+// }
+
